@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./recipe-detail.component.css']
 })
 export class RecipeDetailComponent implements OnInit {
-  @Input() recipeDetails:{name: string, description: string, imageUrl: string}
+  @Input() recipeDetails:{name: string, description: string, imageUrl: string, ingredients}
   constructor() { }
 
   ngOnInit(): void {

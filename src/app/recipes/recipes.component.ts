@@ -14,7 +14,7 @@ export class RecipesComponent implements OnInit {
 
   ngOnInit(): void {
     this.recipeService.setRecipeDescription.subscribe(
-      (recipe: { name: string, description: string, imageUrl: string }) => {
+      (recipe: { name: string, description: string, imageUrl: string, ingredients }) => {
         this.recipeDescription = recipe
       }
     )
