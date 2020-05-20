@@ -1,0 +1,6 @@
+<div class="mt-4">
+    <h6 class="text-danger">In Active Users</h6>
+    <a href="#" class="list-group list-group-item-action" *ngFor="let user of inActiveUsers; let i = item" (click)="moveToActive(user)">
+        <span class="list-group-item">{{user.name+" ("+user.status+")"}}</span>
+    </a>
+</div>

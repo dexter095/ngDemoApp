@@ -1,0 +1,9 @@
+<button class="btn btn-primary" (click)="toggle()">Display Details</button>
+<div class="h-25"><p *ngIf="togglePara">Assignment two works on directives!</p></div>
+<div>
+    <ul>
+        <li *ngFor="let item of logger; let i = index;">
+            <p [ngStyle]="{backgroundColor: i>=4 ? 'blue':''}" [ngClass]="{logColor: i>=4}">{{item}}</p>
+        </li>
+    </ul>
+</div>
