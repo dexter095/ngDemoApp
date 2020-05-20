@@ -1,11 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecipeService {
   recipe = []
-  constructor() { 
+  setRecipeDescription = new EventEmitter<{ name: string, description: string, imageUrl: string }>()
+  
+  constructor() {
     this.recipe.push(
       {
         'name': 'Test Recipe',
@@ -18,7 +20,7 @@ export class RecipeService {
         'imageUrl': 'https://torange.biz/photo/38/IMAGE/pizza-health-recipe-38014.jpg'
       }
     )
-   }
-   
-   
+  }
+
+
 }
