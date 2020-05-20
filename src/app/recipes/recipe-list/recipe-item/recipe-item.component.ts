@@ -8,7 +8,7 @@ import { RecipeService } from 'src/app/shared/recipe.service';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
-  @Input() recipeItem: { name: string, description: string, imageUrl: string };
+  @Input() recipeItem: { name: string, description: string, imageUrl: string, ingredients };
   // @Output() getRecipeInfo = new EventEmitter<{name: string, description: string, imageUrl: string}>();
 
   constructor(private recipeService: RecipeService) { }

@@ -11,6 +11,11 @@ export class ShoppingService {
   }
 
   addIngredients(item) {
-    this.shopingList.push(item)
+    if (item.length > 1) {
+      this.shopingList.push(...item)
+    } else {
+      this.shopingList.push(item)
+    }
   }
+
 }
